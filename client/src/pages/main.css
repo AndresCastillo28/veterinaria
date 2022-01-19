@@ -1,0 +1,103 @@
+.home, .about, .services, .contact, .login, .register {
+    background: #55828B;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+}
+
+.icons, .login-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.icon {
+    font-size: 3.5rem;
+    color: #fff;  
+    cursor: pointer;
+}
+
+.home-img {
+    width: 100%;
+}
+
+.about-img {
+    width: 30%;
+}
+
+.card-title, .contact-label, .fs-2, .fs-3, .fs-5 {
+    color: #364958;
+    font-weight: 600;
+}
+
+.services-btn, .contact-btn, .login-btn, .register-btn, .newsletter-btn {
+    font-weight: 600;
+    background-color: #55828B;
+    border: 1px solid #55828B;
+    border-radius: 20px;
+}
+
+.contact-icon {
+    font-size: 1.6rem;
+}
+
+.contact-form, .register-form {
+    background: #fff;
+}
+
+.form-control {
+    border-width: 0 0 2px 0;
+    border-color: #55828B;
+}
+
+.login-logo, .login-register, .register-logo{
+    text-decoration: none;
+}
+
+.login-form{
+    background: #fff;
+}
+
+.login-forget {
+    text-decoration: none;
+    color: #364958;
+    cursor: pointer;
+}
+
+.login-icon {
+    color: #364958;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.login-img {
+    padding-top: 2.2rem;
+}
+
+.login-subtitle, .login-register {
+    color: #55828B;
+    font-weight: 600;
+}
+
+.register-terms {
+    color: #364958;
+}
+
+.newsletter {
+    background: #55828B;
+}
+
+.newsletter-content {
+    background: #364958;
+}
+
+.newsletter-form {
+    gap: 0.5rem;
+}
+
+.newsletter-input {
+    background: transparent;
+}

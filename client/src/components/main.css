@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #364958;
+}
+
+.navbar-logo {
+    font-weight: 700;
+}
+
+.nav-link, .footer-link {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #fff!important;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: #55828B;
+    border: 1px solid #55828B;
+    border-radius: 20px;
+}
+
+.page-footer {
+    background-color: #364958;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-icon{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.3rem;
+}
