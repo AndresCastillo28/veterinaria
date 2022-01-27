@@ -7,8 +7,15 @@ import Contact from "./Contact"
 import "./main.css"
 import Newsletter from "./Newsletter"
 import Services from "./Services"
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import {Redirect} from 'react-router-dom'
 
-const Home = () => {
+
+const Home = ({isAutheticated}) => {
+    if(isAutheticated){
+        return <Redirect to= '/dashboard' />
+    }
     return (
         <div>
             <Navbar />
@@ -35,6 +42,14 @@ const Home = () => {
             <Footer />
         </div>
     )
+};
+
+Home.propTypes = {
+    isAutheticated: PropTypes.bool,
 }
 
-export default Home
+const mapStateToProps = state => ({
+    isAutheticated: state.auth.isAutheticated
+});
+
+export default connect(mapStateToProps)(Home);

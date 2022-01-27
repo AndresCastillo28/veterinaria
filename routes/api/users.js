@@ -9,7 +9,9 @@ const User = require('../../models/User')
 
 router.post('/', [
     check('name', 'Name is required').not().isEmpty(),
+    check('lastname', 'Last name is required').not().isEmpty(),
     check('email', 'Please insert a valid email').isEmail(),
+    check('phone', 'Please insert a phone').not().isEmpty(),
     check('password', 'Please insert a password with 6 o more characters').isLength({min: 6})
 ],
  async (req, res) => {
@@ -18,7 +20,7 @@ router.post('/', [
      if(!errors.isEmpty()){
          return res.status(400).json({errors: errors.array()})
      }
-     const {name, password, email} = req.body
+     const {name, lastname, email, phone, password} = req.body
 
      try{
         let user = await User.findOne({email});
@@ -29,7 +31,9 @@ router.post('/', [
 
         user = new User({
             name,
+            lastname,
             email,
+            phone,
             password
         });
 
@@ -39,7 +43,7 @@ router.post('/', [
         await user.save();
         
       const payload = {
-          user: {
+          user: { 
               id: user.id
           }
       }
