@@ -12,12 +12,22 @@
     color: #fff!important;
 }
 
-.btn-login {
+.btn-login, .btn-logout {
     font-size: 0.9rem;
     font-weight: 600;
     background-color: #55828B;
     border: 1px solid #55828B;
     border-radius: 20px;
+}
+
+.btn-logout {
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.btn-logout:hover {
+    background-color:#ff0000b0;
+    border: 1px solid #ff0000b0;
 }
 
 .page-footer {

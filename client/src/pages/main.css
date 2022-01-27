@@ -1,4 +1,4 @@
-.home, .about, .services, .contact, .login, .register {
+.home, .about, .services, .contact, .login, .register, .dashboard {
     background: #55828B;
 }
 
@@ -33,11 +33,16 @@
     font-weight: 600;
 }
 
-.services-btn, .contact-btn, .login-btn, .register-btn, .newsletter-btn {
+.services-btn, .contact-btn, .login-btn, .register-btn, .newsletter-btn, .dashboard-btn {
     font-weight: 600;
     background-color: #55828B;
     border: 1px solid #55828B;
     border-radius: 20px;
+}
+
+.dashboard-btn {
+    background-color: #364958;
+    border: 1px solid #364958;
 }
 
 .contact-icon {

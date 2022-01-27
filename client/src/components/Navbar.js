@@ -1,10 +1,9 @@
-import { Fragment } from "react";
-import { FaSignInAlt } from "react-icons/fa"
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import PropTypes from 'prop-types';
+import { Fragment } from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { logout } from "../actions/auth";
-import "./main.css"
+import "./main.css";
 
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
@@ -12,14 +11,24 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
         <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-                <Link to="/dashboard" className="fs-6 login-register">
-                <i className="fas fa-user"></i>{' '}
-                <span className="hide-sm">Dashboard</span>
+                <a className="nav-link active" href="#!">Home</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link active" href="#about">About</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link active" href="#services">Services</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link active" href="#contact">Contact</a>
+            </li>
+            <li className="nav-item">
+                <Link to="/dashboard" className="nav-link active">
+                        Dashboard
                 </Link>
             </li>
             <li className="nav-item">
-                <a onClick={logout} className="nav-link active" href="#!">
-                    <i className="fas fa-sign-out-alt"></i>{' '}
+                <a onClick={logout} className="btn btn-primary btn-logout" href="#!">
                     <span className="hide-sm"> Logout</span></a>
             </li>
         </ul>
@@ -41,7 +50,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             </li>
             <li className="nav-item">
                 <Link to="/login" className="btn btn-primary btn-login">
-                    Login<FaSignInAlt className="ps-2 fs-4" />
+                    Login
                 </Link>
             </li>
         </ul>
